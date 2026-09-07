@@ -1,0 +1,15 @@
+{
+  "name": "my-dsh-plugins",
+  "version": "0.0.0",
+  "private": true,
+  "description": "个人 DeepSeek Harness (DSH) 插件 monorepo：packages/* 下每个目录是一个独立可发布的 DSH 插件。",
+  "type": "module",
+  "scripts": {
+    "test": "pnpm -r test"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@10.0.0"
+}

@@ -1,0 +1,36 @@
+schema: spec-driven
+
+# Project context (optional)
+# This is shown to AI when creating artifacts.
+# Add your tech stack, conventions, style guides, domain knowledge, etc.
+context: |
+  个人 DeepSeek Harness (DSH) 插件开发仓库（GitHub 开源：my-dsh-plugins）。
+  目标是 pnpm monorepo：packages/ 下每个子目录是一个独立可 npm publish 的 DSH 插件。
+  技术栈：Node.js >= 22（ESM 纯 JS，无 TypeScript/构建步骤）、cordis bundle 插件约定、
+  package.json 的 dsh.bundle.patch 声明 + cordis.patch.yml(insert) + lib/index.js
+  (export { name, apply(ctx, config) }) + node:test 假 ctx 冒烟测试。
+  插件彼此独立、无跨包源码依赖；不引入 Turborepo（无构建编排需求）。
+  DSH 会从项目根自动加载 AGENTS.md 作为指令文件（等价 CLAUDE.md）。
+  当前唯一插件 dsh-hello（从仓库根迁入 packages/dsh-hello）。
+
+# Per-artifact rules (optional)
+# Add custom rules for specific artifacts.
+# Example:
+#   rules:
+#     proposal:
+#       - Keep proposals under 500 words
+#       - Always include a "Non-goals" section
+#     tasks:
+#       - Break tasks into chunks of max 2 hours
+
+# Per-operation guidance (optional)
+# Add advisory guidance for how apply and archive work should be conducted.
+# This is separate from artifact rules above.
+# Example:
+#   operations:
+#     apply:
+#       guidance:
+#         - Keep test summaries concise
+#     archive:
+#       guidance:
+#         - Summarize the archive outcome before finishing

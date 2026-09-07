@@ -1,0 +1,23 @@
+# 依赖目录
+node_modules/
+.pnpm-store/
+
+# 日志与临时产物
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# 构建/产物目录（预留：未来 client 插件若引入前端构建会用到）
+dist/
+build/
+coverage/
+
+# 编辑器与系统文件
+.DS_Store
+*.swp
+.idea/
+.vscode/
+*.code-workspace
+
+# 本地环境状态（如有需要放开时再加注释说明）
+.tmp/

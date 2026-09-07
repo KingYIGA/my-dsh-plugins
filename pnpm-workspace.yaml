@@ -1,0 +1,4 @@
+# pnpm workspace：packages/* 下每个目录是一个独立可发布的 DSH 插件包。
+# 插件之间保持独立，无源码级相互依赖。
+packages:
+  - 'packages/*'

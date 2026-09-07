@@ -1,0 +1,6 @@
+#!/bin/sh
+# Wrapper so `dsh plugin` can find pnpm on PATH.
+# pnpm itself lives in /tmp (writable sandbox area), installed from the npm registry.
+export npm_config_cache=/tmp/npm-cache-dsh
+export npm_config_store_dir=/tmp/pnpm-store
+exec node /tmp/pnpm-home/node_modules/pnpm/bin/pnpm.cjs "$@"
