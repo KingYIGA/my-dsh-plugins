@@ -28,10 +28,10 @@
 ## 6. git 初始化与首次提交
 
 - [x] 6.1 在仓库根执行 `git init`，验证 `.git` 目录生成且 `git status` 能列出待跟踪文件
-- [ ] 6.2 执行首次提交（`git add -A && git commit`，提交信息如 `chore: initialize pnpm monorepo for dsh plugins`），验证 `git log` 存在初始提交且工作区干净（`git status` 无未提交变更）
+- [x] 6.2 执行首次提交（`git add -A && git commit`，提交信息如 `chore: initialize pnpm monorepo for dsh plugins`），验证 `git log` 存在初始提交且工作区干净（`git status` 无未提交变更）——**完成：提交 59f6ad6**
 - [ ] 6.3 （后续手动，非自动）若用户已创建 GitHub 远端：`git remote add origin <repo-url>` 并 `git push -u origin main`，验证远端出现仓库内容——此步骤等待用户确认 GitHub 目标
 
 ## 7. 变更收尾验证
 
-- [ ] 7.1 在仓库根核对最终结构：`packages/dsh-hello/` 存在、根含 `package.json`/`pnpm-workspace.yaml`/`.gitignore`/`LICENSE`/`README.md`/`AGENTS.md`/`openspec/`，验证目录树符合 design.md 的目标形态
-- [ ] 7.2 全量测试回归：根执行测试（2.3 的方式），验证所有插件测试通过且无回归
+- [x] 7.1 在仓库根核对最终结构：`packages/dsh-hello/` 存在、根含 `package.json`/`pnpm-workspace.yaml`/`.gitignore`/`LICENSE`/`README.md`/`AGENTS.md`/`openspec/`，验证目录树符合 design.md 的目标形态
+- [x] 7.2 全量测试回归：根执行测试（2.3 的方式），验证所有插件测试通过且无回归
